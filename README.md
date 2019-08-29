@@ -1,8 +1,8 @@
 # UR-FUNNY
 
 1. This repository includes the UR-FUNNY datset: first dataset for *multimodal humor detection* .
-2. It also includes the tutorial about how to read the dataset.
-3. It also includes the code of Contextual Memory Fusion Netowrk for humor detection.
+2. It has the tutorial about how to read the dataset.
+3. It has the code of Contextual Memory Fusion Netowrk for humor detection.
 
 Please read the folllwoing paper for the details of the dataset and models. 
 
@@ -33,7 +33,7 @@ data_folds.pkl has the ductionary that contains train, dev and test list of humo
 
 ## Langauge Features:
 
-word_embedding_list.pkl has the list of word embeddings of all unique words that are present in the UR-FUNNY dataset. We use the **word indexes** from this list as language feature. Later we can use these **word indexes**to retrive the glove embedding of those words. We followed this approach to reduce the space. Because same word appears multiple times.
+word_embedding_list.pkl has the list of word embeddings of all unique words that are present in the UR-FUNNY dataset. We use the **word indexes** from this list as language feature. Later we can use these **word indexes** to retrive the glove embedding of those words. We followed this approach to reduce the space. Because same word appears multiple times.
 
 
 word_embedding_indexes_sdk.pkl contains a dictionary. All the keys are the **id** of the humor / not humor video segments. 
@@ -52,6 +52,8 @@ word_embedding_indexes_sdk{
 		context_embedding_indexes : [[ idx21,idx4,.... ],[idx91,idx100......],..]	
 									 
 		}
+	.....
+	.....
 }
 ```
 
@@ -82,7 +84,7 @@ covarep_features_sdk{
 		....
 	}
 	....
-
+	....
 }
 ```
 
@@ -112,7 +114,7 @@ openface_features_sdk{
 		....
 	}
 	....
-
+	....
 }
 ```
 
@@ -121,6 +123,14 @@ Each humor/not humor video segment has two kind of features:
 1. punchline_features: It contanis the average openface features for each word in the punchline sentence. We aligned our features on word level. The dimension of openface fetaures is 75. So if the punchline has n words then the dimension will be n * 75.
 2. context_features: It contanis the average openface features for each word in the context sentences. It is three dimensional list. 1st dimension is number of sentences in context. Second dimension is number of word for each sentence. 3rd dimension is the dimension of openface fetaures (75).
 
+## Humor Labels:
+
+humor_label_sdk.pkl contains a dictionary. All the kyes are the **id** of the humor/not humor video segments.
+
+For each id the value is either 1 or 0.
+
+1 = means this video segment has humorours puncline
+0 = meanth this video segment does not have humorous punchline 
 
 
 # Data Loading Tuitorial
