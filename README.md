@@ -11,7 +11,7 @@ ROC-HCI Website: (https://roc-hci.com/)
 
 Please read the folllwoing paper for the details of the dataset and models. 
 
-Hasan, Md Kamrul, Wasifur Rahman, Amir Zadeh, Jianyuan Zhong, Md Iftekhar Tanveer, Louis-Philippe Morency and Mohammed (Ehsan) Hoque. "UR-FUNNY: A Multimodal Language Dataset for Understanding Humor", *EMNLP, 2019*. (accepetd) 
+Hasan, Md Kamrul, Wasifur Rahman, Amir Zadeh, Jianyuan Zhong, Md Iftekhar Tanveer, Louis-Philippe Morency and Mohammed (Ehsan) Hoque. "UR-FUNNY: A Multimodal Language Dataset for Understanding Humor", **EMNLP, 2019**. (accepetd) 
 
 
 # Dataset
