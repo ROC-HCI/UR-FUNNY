@@ -11,7 +11,7 @@ Hasan, Md Kamrul, Wasifur Rahman, Amir Zadeh, Jianyuan Zhong, Md Iftekhar Tanvee
 
 # Dataset
 
-The link of the dataset: [humor dataset](https://www.dropbox.com/s/izk6khkrdwcncia/ted_humor_sdk_v1.zip?dl=1)
+The link of the  preprocessed features: [humor dataset](https://www.dropbox.com/s/izk6khkrdwcncia/ted_humor_sdk_v1.zip?dl=1)
 
 
 It has five pkl files:
