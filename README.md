@@ -1,6 +1,6 @@
 # UR-FUNNY
 
-1. This repository includes the UR-FUNNY datset: first dataset for *multimodal humor detection* .
+1. This repository includes the UR-FUNNY dataset: first dataset for *multimodal humor detection* .
 2. It has the tutorial about how to read the dataset.
 3. It has the code of Contextual Memory Fusion Netowrk for humor detection.
 
