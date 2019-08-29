@@ -6,8 +6,7 @@
 
 Please read the folllwoing paper for the details of the dataset and models. 
 
-Hasan, M. K., Rahman, W., Zadeh, A., Zhong, J., Tanveer, M. I., & Morency, L. P . UR-FUNNY: A Multimodal Language Dataset for Understanding Humor. (Acepted in EMNLP 2019)
-
+Hasan, Md Kamrul, Wasifur Rahman, Amir Zadeh, Jianyuan Zhong, Md Iftekhar Tanveer, and Louis-Philippe Morency. "UR-FUNNY: A Multimodal Language Dataset for Understanding Humor."
 
 
 # Dataset
