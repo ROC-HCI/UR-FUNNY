@@ -129,8 +129,8 @@ humor_label_sdk.pkl contains a dictionary. All the kyes are the **id** of the hu
 
 For each id the value is either 1 or 0.
 
-1 = means this video segment has humorours puncline
-0 = meanth this video segment does not have humorous punchline 
+- 1 = means this video segment has humorours puncline
+- 0 = means this video segment does not have humorous punchline 
 
 
 # Data Loading Tuitorial
