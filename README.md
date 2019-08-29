@@ -11,7 +11,8 @@ Hasan, M. K., Rahman, W., Zadeh, A., Zhong, J., Tanveer, M. I., & Morency, L. P 
 
 # Dataset
 
-The link of the dataset: 
+The link of the dataset: [humor dataset](https://www.dropbox.com/s/izk6khkrdwcncia/ted_humor_sdk_v1.zip?dl=1)
+
 
 It has five pkl files:
 
@@ -38,9 +39,14 @@ The structure of the dictionary:
 
 ```
 word_embedding_indexes_sdk{
-	hid: {
+	id1: {
 		punchline_embedding_indexes : [ idx1,idx2,.... ]
-		context_embedding_indexes : [[ idx1,idx2,.... ],[idx5,idx6......],..]	
+		context_embedding_indexes : [[ idx2,idx30,.... ],[idx5,idx6......],..]	
+									 
+		}
+	id2: {
+		punchline_embedding_indexes : [ idx10,idx12,.... ]
+		context_embedding_indexes : [[ idx21,idx4,.... ],[idx91,idx100......],..]	
 									 
 		}
 }
@@ -109,4 +115,16 @@ Each humor/not humor video segment has the two kind of features:
 1. punchline_features: It contanis the average openface features for each word in the punchline sentence. We aligned our features on word level. The dimension of openface fetaures is 75. So if the punchline has n words then the dimension will be n * 75.
 2. context_features: It contanis the average openface features for each word in the context sentences. It is three dimensional list. 1st dimension is number of sentences in context. Second dimension is number of word for each sentence. 3rd dimension is number of words in each sentence.
 
+
+
+# Data Loading Tuitorial
+
+**Prerequistie**: python 3.5, pickle, pytorch
+
+There is a tuitorial named humor_dataloader.ipynub about how to read the dataset into a dataloader form in pytorch.
+
+
+# Contextual Memory Fusion Netowrk for Humor Detection
+
+The github link of the code for Contextual Memory Fusion Netowrk of Humor Detection is coming soon. 
 
