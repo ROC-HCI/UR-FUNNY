@@ -1,12 +1,17 @@
-# UR-FUNNY
 
+This work is done Rochester Human by Rochester Human-Computer Interaction (ROC HCI) lab, University of Rochester, USA with the collaboration of Language Technologies Institute, SCS, CMU, USA.
+
+ROC-HCI Website: (https://roc-hci.com/) 
+
+# UR-FUNNY
+ 
 1. This repository includes the UR-FUNNY dataset: first dataset for *multimodal humor detection* .
 2. It has the tutorial about how to read the dataset.
 3. It has the code of Contextual Memory Fusion Netowrk for humor detection.
 
 Please read the folllwoing paper for the details of the dataset and models. 
 
-Hasan, Md Kamrul, Wasifur Rahman, Amir Zadeh, Jianyuan Zhong, Md Iftekhar Tanveer, Louis-Philippe Morency and Mohammed (Ehsan) Hoque. "UR-FUNNY: A Multimodal Language Dataset for Understanding Humor", EMNLP, 2019. (accepetd) 
+Hasan, Md Kamrul, Wasifur Rahman, Amir Zadeh, Jianyuan Zhong, Md Iftekhar Tanveer, Louis-Philippe Morency and Mohammed (Ehsan) Hoque. "UR-FUNNY: A Multimodal Language Dataset for Understanding Humor", *EMNLP, 2019*. (accepetd) 
 
 
 # Dataset
