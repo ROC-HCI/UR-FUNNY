@@ -72,13 +72,13 @@ The structure of the covarep_features_sdk:
 ```
 covarep_features_sdk{
 	id1: {
-		punchline_features : [ .... ]
-		context_features : [[ .... ],[......],..]							 
+		punchline_features : [ [ .... ],[ .... ], ...]
+		context_features : [ [[ .... ],[......],..], [[ .... ],[......],..], ... ]							 
 		}
 
 	id2:{
-		punchline_features : [ .... ]
-		context_features : [[ .... ],[......],..]
+		punchline_features : [ [ .... ],[ .... ], ...]
+		context_features : [ [[ .... ],[......],..], [[ .... ],[......],..], ... ]
 		....
 	}
 	....
@@ -102,13 +102,13 @@ The structure of the openface_features_sdk:
 ```
 openface_features_sdk{
 	id1: {
-		punchline_features : [ .... ]
-		context_features : [[ .... ],[......],..]							 
+		punchline_features : [ [ .... ],[ .... ], ...]
+		context_features : [ [[ .... ],[......],..], [[ .... ],[......],..], ... ]							 
 		}
 
 	id2:{
-		punchline_features : [ .... ]
-		context_features : [[ .... ],[......],..]
+		punchline_features : [ [ .... ],[ .... ], ...]
+		context_features : [ [[ .... ],[......],..], [[ .... ],[......],..], ... ]
 		....
 	}
 	....
@@ -132,4 +132,4 @@ humor_dataloader.ipynub is the tutorial for loading UR-FUNNY dataset. It has det
 
 # Contextual Memory Fusion Netowrk for Humor Detection
 
-The github link of the code for Contextual Memory Fusion Netowrk of Humor Detection : ***oming Soon***
+The github link of the code for Contextual Memory Fusion Netowrk of Humor Detection : ***coming Soon***
