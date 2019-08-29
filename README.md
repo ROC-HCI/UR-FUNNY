@@ -132,4 +132,4 @@ humor_dataloader.ipynub is the tutorial for loading UR-FUNNY dataset. It has det
 
 # Contextual Memory Fusion Netowrk for Humor Detection
 
-The github link of the code for Contextual Memory Fusion Netowrk of Humor Detection : https://github.com/WasifurRahman/Multimodal_Humor
+The github link of the code for Contextual Memory Fusion Netowrk of Humor Detection : ***oming Soon***
