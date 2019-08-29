@@ -1,5 +1,5 @@
 
-This work is done Rochester Human by Rochester Human-Computer Interaction (ROC HCI) lab, University of Rochester, USA with the collaboration of Language Technologies Institute, SCS, CMU, USA.
+This work is done by Rochester Human-Computer Interaction (ROC HCI) lab, University of Rochester, USA with the collaboration of Language Technologies Institute, SCS, CMU, USA.
 
 ROC-HCI Website: (https://roc-hci.com/) 
 
