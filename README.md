@@ -141,7 +141,7 @@ For each id the value is either 1 or 0.
 
 **Prerequistie**: python 3.5, pickle, pytorch
 
-humor_dataloader.ipynub is the tutorial for loading UR-FUNNY dataset. It has details instruction about how to design Dataset class and Dataloader for UR-FUNNY dataset in pytorch. It also show how to read the ounchline features, context features and humor label using the dataloader.   
+humor_dataloader.ipynub is the tutorial for loading UR-FUNNY dataset. It has details instruction about how to design Dataset class and Dataloader for UR-FUNNY dataset in pytorch. It also show how to read the punchline features, context features and humor label using the dataloader.   
 
 
 # Contextual Memory Fusion Netowrk for Humor Detection
