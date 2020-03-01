@@ -73,12 +73,15 @@ word_embedding_indexes_sdk{
 }
 ```
 
-Each video segments has two kind of features: 
+Each video segments has four kind of features: 
 
 1. punchline_features: It contanis the list of **word indexes** (descibed above) of punchline sentence. The dimension of word index is 1. We will use this word index to retrive the word embedding (glove.840B.300d) from word_embedding_list (described above). So if the punchline has n words then the dimension will be n * 1.
 
 2. context_features: It contanis the list of **word indexes** for the sentences in context. It is three dimensional list. 1st dimension is number of sentences in context. Second dimension is number of word for each sentence. 3rd dimension is the dimension of word index which is 1.
 
+3. punchline_sentence: It contains the punchline sentence
+
+4. context_sentences: It contanis the sentences used in context
 
 
 ## Acoustic Features:
@@ -121,7 +124,7 @@ The structure of the openface_features_sdk:
 openface_features_sdk{
 	id1: {
 		punchline_features : [ [ .... ],[ .... ], ...]
-		context_features : [ [[ .... ],[......],..], [[ .... ],[......],..], ... ]							 
+		context_features : [ [[ .... ],[......],..], [[ .... ],[......],..], ... ]							 	....
 		}
 
 	id2:{
