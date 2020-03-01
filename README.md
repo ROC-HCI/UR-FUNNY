@@ -16,9 +16,10 @@ Hasan, Md Kamrul, Wasifur Rahman, Amir Zadeh, Jianyuan Zhong, Md Iftekhar Tanvee
 
 # Dataset
 
-You can find the version of the dataset we used in the EMNLP paper in the following link: (https://github.com/ROC-HCI/UR-FUNNY/blob/master/UR-FUNNY-V1.md)
+You can find the version of the dataset that we used in the EMNLP paper in the following link: (https://github.com/ROC-HCI/UR-FUNNY/blob/master/UR-FUNNY-V1.md)
 
-We have created second version of the dataset which removes nosiy data instances and the humor insatnces has no overlap. This new version also has more context sentences. You will also find the raw videos in here. The format of this version is simialr to previous one. Plese read the followings for details about the extracted features. 
+## UR-FUNNY-V2
+We have created second version of the dataset which removes nosiy data instances and the humor insatnces has no overlap. This new version also has more context sentences. You will also find the raw videos in here. The format of this version is simialr to previous one. Please read the followings for details about the extracted features. 
 
 raw videos: (https://www.dropbox.com/s/lg7kjx0kul3ansq/urfunny2_videos.zip?dl=1)  
 extracted features: (https://www.dropbox.com/sh/9h0pcqmqoplx9p2/AAC8yYikSBVYCSFjm3afFHQva?dl=1)
