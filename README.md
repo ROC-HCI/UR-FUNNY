@@ -46,7 +46,7 @@ data_folds.pkl has the ductionary that contains train, dev and test list of humo
 word_embedding_list.pkl has the list of word embeddings of all unique words that are present in the UR-FUNNY dataset. We use the **word indexes** from this list as language feature. Later we can use these **word indexes** to retrive the glove embedding of those words. We followed this approach to reduce the space. Because same word appears multiple times.
 
 
-word_embedding_indexes_sdk.pkl contains a dictionary. All the keys are the **id** of the humor / not humor video segments. 
+language_sdk.pkl contains a dictionary. All the keys are the **id** of the humor / not humor video segments. This **id** wll also match with raw video name.
 
 The structure of the dictionary:
 
@@ -55,12 +55,18 @@ word_embedding_indexes_sdk{
 	id1: {
 		punchline_embedding_indexes : [ idx1,idx2,.... ]
 		context_embedding_indexes : [[ idx2,idx30,.... ],[idx5,idx6......],..]	
-									 
+		punchline_sentence : [....]
+		context_sentences : [[sen1], [sen2],...]
+		punchline_intervals : [ intervals of words in punchline ]
+		context_intervals : [[ intervals of words in sen1 ], [ intervals of words in sen2 ],.......]
 		}
 	id2: {
 		punchline_embedding_indexes : [ idx10,idx12,.... ]
 		context_embedding_indexes : [[ idx21,idx4,.... ],[idx91,idx100......],..]	
-									 
+		punchline_sentence : [....]
+		context_sentences : [[sen1], [sen2],...]
+		punchline_intervals : [ intervals of words in punchline ]
+		context_intervals : [[ intervals of words in sen1 ], [ intervals of words in sen2 ],.......]				 
 		}
 	.....
 	.....
@@ -69,7 +75,7 @@ word_embedding_indexes_sdk{
 
 Each video segments has two kind of features: 
 
-1. punchline_features: It contanis the list of **word indexes** (descibed above) of punchline sentence. The dimension of word index is 1. We will use this word index to retrive the word embedding from word_embedding_list (described above). So if the punchline has n words then the dimension will be n * 1.
+1. punchline_features: It contanis the list of **word indexes** (descibed above) of punchline sentence. The dimension of word index is 1. We will use this word index to retrive the word embedding (glove.840B.300d) from word_embedding_list (described above). So if the punchline has n words then the dimension will be n * 1.
 
 2. context_features: It contanis the list of **word indexes** for the sentences in context. It is three dimensional list. 1st dimension is number of sentences in context. Second dimension is number of word for each sentence. 3rd dimension is the dimension of word index which is 1.
 
@@ -85,7 +91,7 @@ The structure of the covarep_features_sdk:
 covarep_features_sdk{
 	id1: {
 		punchline_features : [ [ .... ],[ .... ], ...]
-		context_features : [ [[ .... ],[......],..], [[ .... ],[......],..], ... ]							 
+		context_features : [ [[ .... ],[......],..], [[ .... ],[......],..], ... ]							 	....
 		}
 
 	id2:{
@@ -107,7 +113,7 @@ Each humor/not humor video segment has two kind of features:
 
 ## Visual Features:
 
-openface_features_sdk.pkl contains a dictionary. All the kyes are the **id** of the humor/not humor video segments.
+openface_features_sdk.pkl contains a dictionary. All the kyes are the **id** of the humor/not humor video segments. We have used OpenFace2 (https://github.com/TadasBaltrusaitis/OpenFace) to extract the fetaures.
 
 The structure of the openface_features_sdk:
 
@@ -130,8 +136,8 @@ openface_features_sdk{
 
 Each humor/not humor video segment has two kind of features:
 
-1. punchline_features: It contanis the average openface features for each word in the punchline sentence. We aligned our features on word level. The dimension of openface fetaures is 75. So if the punchline has n words then the dimension will be n * 75.
-2. context_features: It contanis the average openface features for each word in the context sentences. It is three dimensional list. 1st dimension is number of sentences in context. Second dimension is number of word for each sentence. 3rd dimension is the dimension of openface fetaures (75).
+1. punchline_features: It contanis the average openface features for each word in the punchline sentence. We aligned our features on word level. The dimension of openface fetaures is 371. So if the punchline has n words then the dimension will be n * 371.
+2. context_features: It contanis the average openface features for each word in the context sentences. It is three dimensional list. 1st dimension is number of sentences in context. Second dimension is number of word for each sentence. 3rd dimension is the dimension of openface fetaures (371).
 
 ## Humor Labels:
 
