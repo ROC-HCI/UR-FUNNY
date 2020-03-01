@@ -11,36 +11,23 @@ ROC-HCI Website: (https://roc-hci.com/)
 
 Please read the folllwoing paper for the details of the dataset and models. You can cite the paper:
 
-@inproceedings{hasan-etal-2019-ur,
-    title = "{UR}-{FUNNY}: A Multimodal Language Dataset for Understanding Humor",
-    author = "Hasan, Md Kamrul  and
-      Rahman, Wasifur  and
-      Bagher Zadeh, AmirAli  and
-      Zhong, Jianyuan  and
-      Tanveer, Md Iftekhar  and
-      Morency, Louis-Philippe  and
-      Hoque, Mohammed (Ehsan)",
-    booktitle = "Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)",
-    month = nov,
-    year = "2019",
-    address = "Hong Kong, China",
-    publisher = "Association for Computational Linguistics",
-    url = "https://www.aclweb.org/anthology/D19-1211",
-    doi = "10.18653/v1/D19-1211",
-    pages = "2046--2056",
-    abstract = "Humor is a unique and creative communicative behavior often displayed during social interactions. It is produced in a multimodal manner, through the usage of words (text), gestures (visual) and prosodic cues (acoustic). Understanding humor from these three modalities falls within boundaries of multimodal language; a recent research trend in natural language processing that models natural language as it happens in face-to-face communication. Although humor detection is an established research area in NLP, in a multimodal context it has been understudied. This paper presents a diverse multimodal dataset, called UR-FUNNY, to open the door to understanding multimodal language used in expressing humor. The dataset and accompanying studies, present a framework in multimodal humor detection for the natural language processing community. UR-FUNNY is publicly available for research.",
-}
+Hasan, Md Kamrul, Wasifur Rahman, Amir Zadeh, Jianyuan Zhong, Md Iftekhar Tanveer, Louis-Philippe Morency and Mohammed (Ehsan) Hoque. "UR-FUNNY: A Multimodal Language Dataset for Understanding Humor", EMNLP, 2019. link: (https://www.aclweb.org/anthology/D19-1211/)
 
 
 # Dataset
 
-The link of the  preprocessed features: [humor dataset](https://www.dropbox.com/s/izk6khkrdwcncia/ted_humor_sdk_v1.zip?dl=1)
+You can find the version of the dataset we used in the EMNLP paper in the following link: (https://github.com/ROC-HCI/UR-FUNNY/blob/master/UR-FUNNY-V1.md)
+
+We have created second version of the dataset which removes nosiy data instances and the humor insatnces has no overlap. This new version also has more context sentences. You will also find the raw videos in here. The format of this version is simialr to previous one. Plese read the followings for details about the extracted features. 
+
+raw videos: (https://www.dropbox.com/s/lg7kjx0kul3ansq/urfunny2_videos.zip?dl=1)  
+extracted features: (https://www.dropbox.com/sh/9h0pcqmqoplx9p2/AAC8yYikSBVYCSFjm3afFHQva?dl=1)
 
 
-It has five pkl files:
+In the extracted features folder, it has five pkl files:
 
 1. data_folds 
-2. word_embedding_indexes_sdk
+2. langauge_sdk
 2. openface_features_sdk
 3. covarep_features_sdk
 4. humor_label_sdk
