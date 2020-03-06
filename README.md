@@ -51,7 +51,7 @@ language_sdk.pkl contains a dictionary. All the keys are the **id** of the humor
 The structure of the dictionary:
 
 ```
-word_embedding_indexes_sdk{
+langauge_sdk{
 	id1: {
 		punchline_embedding_indexes : [ idx1,idx2,.... ]
 		context_embedding_indexes : [[ idx2,idx30,.... ],[idx5,idx6......],..]	
