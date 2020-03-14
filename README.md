@@ -41,7 +41,7 @@ In the extracted features folder, it has five pkl files:
 data_folds.pkl has the ductionary that contains train, dev and test list of humor/not humor video segments **id**. 
 
 
-## Langauge Features:
+## Language Features:
 
 word_embedding_list.pkl has the list of word embeddings of all unique words that are present in the UR-FUNNY dataset. We use the **word indexes** from this list as language feature. Later we can use these **word indexes** to retrive the glove embedding of those words. We followed this approach to reduce the space. Because same word appears multiple times.
 
