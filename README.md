@@ -9,44 +9,44 @@ ROC-HCI Website: (https://roc-hci.com/)
 2. It has the tutorial about how to read the dataset.
 3. It has the code of Contextual Memory Fusion Netowrk for humor detection.
 
-Please read the folllwoing paper for the details of the dataset and models. You can cite the paper:
+Please read the folllwoing paper for the details of the dataset and models.
 
 Hasan, Md Kamrul, Wasifur Rahman, Amir Zadeh, Jianyuan Zhong, Md Iftekhar Tanveer, Louis-Philippe Morency and Mohammed (Ehsan) Hoque. "UR-FUNNY: A Multimodal Language Dataset for Understanding Humor", EMNLP, 2019. link: (https://www.aclweb.org/anthology/D19-1211/)
 
 
 # Dataset
 
-You can find the version of the dataset that we used in the EMNLP paper in the following link: (https://github.com/ROC-HCI/UR-FUNNY/blob/master/UR-FUNNY-V1.md)
+You can find the first version of the dataset that we used in the EMNLP paper in the following link: (https://github.com/ROC-HCI/UR-FUNNY/blob/master/UR-FUNNY-V1.md)
 
 ## UR-FUNNY-V2
-We have created second version of the dataset which removes nosiy data instances and the humor insatnces has no overlap. This new version also has more context sentences. You will also find the raw videos in here. The format of this version is simialr to previous one. Please read the followings for details about the extracted features. 
+We have created second version of the dataset by removing the nosiy and overlapping data instances. This new version has more context sentences. We have added the link of the raw video here. The format of this version is simialr to previous one. Please read the followings for the details about the extracted features. 
 
-raw videos: (https://www.dropbox.com/s/lg7kjx0kul3ansq/urfunny2_videos.zip?dl=1)  
-extracted features: (https://www.dropbox.com/sh/9h0pcqmqoplx9p2/AAC8yYikSBVYCSFjm3afFHQva?dl=1)
+**Raw Videos**: (https://www.dropbox.com/s/lg7kjx0kul3ansq/urfunny2_videos.zip?dl=1)  
+**Extracted Features**: (https://www.dropbox.com/sh/9h0pcqmqoplx9p2/AAC8yYikSBVYCSFjm3afFHQva?dl=1)
 
 
-In the extracted features folder, it has five pkl files:
+There are six pickle files in the extracted features folder:
 
 1. data_folds 
 2. langauge_sdk
-2. openface_features_sdk
-3. covarep_features_sdk
-4. humor_label_sdk
-5. word_embedding_list
+3. openface_features_sdk
+4. covarep_features_sdk
+5. humor_label_sdk
+6. word_embedding_list
 
 
 
 ## Data folds:
 
-data_folds.pkl has the ductionary that contains train, dev and test list of humor/not humor video segments **id**. 
+data_folds.pkl has the dictionary that contains train, dev and test list of humor/not humor video segments **id**. These folds are speaker independent and homogenous. Please use these folds for valid comparison.
 
 
 ## Langauge Features:
 
-word_embedding_list.pkl has the list of word embeddings of all unique words that are present in the UR-FUNNY dataset. We use the **word indexes** from this list as language feature. Later we can use these **word indexes** to retrive the glove embedding of those words. We followed this approach to reduce the space. Because same word appears multiple times.
+word_embedding_list.pkl has the list of word embeddings of all unique words that are present in the UR-FUNNY dataset. We use the **word indexes** from this list as language feature. These **word indexes** are used to retrive the glove embeddings of the corresposnding words. We followed this approach to reduce the space. Because same word appears multiple times.
 
 
-language_sdk.pkl contains a dictionary. All the keys are the **id** of the humor / not humor video segments. This **id** wll also match with raw video name.
+language_sdk.pkl contains a dictionary. The keys of the dictionary are the unique **id** of each humor / not humor video utterance. The corresponding raw video uttereances are also named by these unique **id**'s.
 
 The structure of the dictionary:
 
@@ -75,9 +75,9 @@ langauge_sdk{
 
 Each video segments has four kind of features: 
 
-1. punchline_features: It contanis the list of **word indexes** (descibed above) of punchline sentence. The dimension of word index is 1. We will use this word index to retrive the word embedding (glove.840B.300d) from word_embedding_list (described above). So if the punchline has n words then the dimension will be n * 1.
+1. punchline_features: It contanis the list of **word indexes** (described above) of punchline sentence. We will use this word index to retrive the word embedding (glove.840B.300d) from word_embedding_list (described above). So if the punchline has n words then the dimension will be n.
 
-2. context_features: It contanis the list of **word indexes** for the sentences in context. It is three dimensional list. 1st dimension is number of sentences in context. Second dimension is number of word for each sentence. 3rd dimension is the dimension of word index which is 1.
+2. context_features: It contanis the list of **word indexes** for the sentences in context. It is two dimensional list. First dimension is the number of sentences in context. Second dimension is the number of word for each sentence.
 
 3. punchline_sentence: It contains the punchline sentence
 
@@ -86,7 +86,7 @@ Each video segments has four kind of features:
 
 ## Acoustic Features:
 
-covarep_features_sdk.pkl contains a dictionary. All the kyes are the **id** of the humor/not humor video segments.
+covarep_features_sdk.pkl contains a dictionary. The keys of the dictionary are the unique **id** of each humor / not humor video utterance. We used COVAREP (https://covarep.github.io/covarep/) to extract acoustic features. See the extracted_features.txt for the names of the features.
 
 The structure of the covarep_features_sdk:
 
@@ -110,13 +110,13 @@ covarep_features_sdk{
 Each humor/not humor video segment has two kind of features:
 
 1. punchline_features: It contanis the average covarep features for each word in the punchline sentence. We aligned our features on word level. The dimension of covarep fetaures is 81. So if the punchline has n words then the dimension will be n * 81.
-2. context_features: It contanis the average covarep features for each word in the context sentences. It is three dimensional list. 1st dimension is number of sentences in context. Second dimension is number of word for each sentence. 3rd dimension is the dimension of covarep fetaures (81).
+2. context_features: It contanis the average covarep features for each word in the context sentences. It is a three dimensional list. First dimension is the number of sentences in context. Second dimension is the number of word for each sentence. Third dimension is the dimension of covarep fetaures (81).
 
 
 
 ## Visual Features:
 
-openface_features_sdk.pkl contains a dictionary. All the kyes are the **id** of the humor/not humor video segments. We have used OpenFace2 (https://github.com/TadasBaltrusaitis/OpenFace) to extract the fetaures.
+openface_features_sdk.pkl contains a dictionary. The keys of the dictionary are the unique **id** of each humor / not humor video utterance. We have used OpenFace2 (https://github.com/TadasBaltrusaitis/OpenFace) to extract the fetaures. See the extracted_features.txt for the names of the features.
 
 The structure of the openface_features_sdk:
 
@@ -140,7 +140,7 @@ openface_features_sdk{
 Each humor/not humor video segment has two kind of features:
 
 1. punchline_features: It contanis the average openface features for each word in the punchline sentence. We aligned our features on word level. The dimension of openface fetaures is 371. So if the punchline has n words then the dimension will be n * 371.
-2. context_features: It contanis the average openface features for each word in the context sentences. It is three dimensional list. 1st dimension is number of sentences in context. Second dimension is number of word for each sentence. 3rd dimension is the dimension of openface fetaures (371).
+2. context_features: It contanis the average openface features for each word in the context sentences. It is a three dimensional list. First dimension is the number of sentences in context. Second dimension is the number of word for each sentence. Third dimension is the dimension of openface fetaures (371).
 
 ## Humor Labels:
 
@@ -156,9 +156,5 @@ For each id the value is either 1 or 0.
 
 **Prerequistie**: python 3.5, pickle, pytorch
 
-humor_dataloader.ipynub is the tutorial for loading UR-FUNNY dataset. It has details instruction about how to design Dataset class and Dataloader for UR-FUNNY dataset in pytorch. It also show how to read the punchline features, context features and humor label using the dataloader.   
+humor_dataloader.ipynub is the tutorial for loading UR-FUNNY dataset. It has details instruction about how to design Dataset class and Dataloader for UR-FUNNY dataset in pytorch. It shows how to read the punchline features, context features and humor label using the dataloader.   
 
-
-# Contextual Memory Fusion Netowrk for Humor Detection
-
-The github link of the code for Contextual Memory Fusion Netowrk of Humor Detection : ***coming Soon***
