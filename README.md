@@ -23,7 +23,7 @@ We have created second version of the dataset by removing the nosiy and overlapp
 
 **Raw Videos**: (https://www.dropbox.com/s/lg7kjx0kul3ansq/urfunny2_videos.zip?dl=1)  
 **Extracted Features**: (https://www.dropbox.com/sh/9h0pcqmqoplx9p2/AAC8yYikSBVYCSFjm3afFHQva?dl=1)
-**Transcripts**: You will find the transcript in language_sdk.pkl described below.
+**Transcripts**: You will find the text of each video utterance in language_sdk.pkl described below.
 
 There are six pickle files in the extracted features folder:
 
