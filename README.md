@@ -9,9 +9,29 @@ ROC-HCI Website: (https://roc-hci.com/)
 2. It has the tutorial about how to read the dataset.
 3. It has the code of Contextual Memory Fusion Netowrk for humor detection.
 
-Please read the folllwoing paper for the details of the dataset and models.
+Please read the folllwoing paper for the details of the dataset and models. If you use the data and models, please consider citing the research paper:
 
-Hasan, Md Kamrul, Wasifur Rahman, Amir Zadeh, Jianyuan Zhong, Md Iftekhar Tanveer, Louis-Philippe Morency and Mohammed (Ehsan) Hoque. "UR-FUNNY: A Multimodal Language Dataset for Understanding Humor", EMNLP, 2019. link: (https://www.aclweb.org/anthology/D19-1211/)
+```
+@inproceedings{hasan-etal-2019-ur,
+    title = "{UR}-{FUNNY}: A Multimodal Language Dataset for Understanding Humor",
+    author = "Hasan, Md Kamrul  and
+      Rahman, Wasifur  and
+      Bagher Zadeh, AmirAli  and
+      Zhong, Jianyuan  and
+      Tanveer, Md Iftekhar  and
+      Morency, Louis-Philippe  and
+      Hoque, Mohammed (Ehsan)",
+    booktitle = "Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)",
+    month = nov,
+    year = "2019",
+    address = "Hong Kong, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/D19-1211",
+    doi = "10.18653/v1/D19-1211",
+    pages = "2046--2056",
+    abstract = "",
+}
+```
 
 
 # Dataset
